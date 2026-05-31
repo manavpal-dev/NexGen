@@ -1,5 +1,5 @@
 import PageHero from "@/components/shared/PageHero";
-// import ContactForm from "@/components/contact/ContactForm";
+import ContactForm from "@/components/contact/ContactForm";
 
 export default function ContactPage() {
   return (
@@ -13,7 +13,7 @@ export default function ContactPage() {
       <section className="py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2">
           <div>
-            {/* <ContactForm /> */}
+            <ContactForm />
           </div>
 
           <div className="rounded-3xl bg-slate-950 p-10 text-white">
