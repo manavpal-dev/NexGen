@@ -1,4 +1,11 @@
+export const metadata = {
+  title: "NexGen Accounting Associates",
+  description:
+    "Professional accounting, taxation, audit, compliance and advisory services for businesses across India.",
+};
+
 import About from "@/components/home/About";
+import ContactCTA from "@/components/home/ContactCTA";
 import Hero from "@/components/home/Hero";
 import Services from "@/components/home/Services";
 import Team from "@/components/home/Team";
@@ -12,6 +19,7 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <Team />
+      <ContactCTA />
     </main>
   );
 }
