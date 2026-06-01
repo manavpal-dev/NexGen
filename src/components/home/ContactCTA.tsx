@@ -5,7 +5,7 @@ export default function ContactCTA() {
     <section className="bg-gradient-to-r from-blue-950 to-slate-950 py-24">
       <div className="mx-auto max-w-5xl px-6 text-center">
         <span className="rounded-full border border-yellow-500/30 bg-yellow-500/10 px-4 py-2 text-sm font-medium text-yellow-400">
-          Let's Work Together
+          Let&apos;s Work Together
         </span>
 
         <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
@@ -17,7 +17,7 @@ export default function ContactCTA() {
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
           From bookkeeping and GST compliance to audit support and taxation
-          services, we're here to help your business stay compliant and grow
+          services, we&apos;re here to help your business stay compliant and grow
           confidently.
         </p>
 

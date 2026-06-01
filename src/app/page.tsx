@@ -1,7 +1,12 @@
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "NexGen Accounting Associates",
   description:
-    "Professional accounting, taxation, audit, compliance and advisory services for businesses across India.",
+    "Professional accounting, taxation, audit support, GST, TDS, compliance, financial reporting, and advisory services for businesses in Delhi NCR.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 import About from "@/components/home/About";

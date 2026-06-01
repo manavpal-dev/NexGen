@@ -1,13 +1,26 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Email service is not configured.",
+        },
+        {
+          status: 500,
+        },
+      );
+    }
+
     const body = await request.json();
 
     const { name, email, phone, company, service, message } = body;
+    const resend = new Resend(apiKey);
 
     await resend.emails.send({
       from: "onboarding@resend.dev",
@@ -32,10 +45,12 @@ export async function POST(request: Request) {
       success: true,
     });
   } catch (error) {
+    console.error("Contact form submission failed:", error);
+
     return NextResponse.json(
       {
         success: false,
-        error,
+        error: "Unable to send your message right now.",
       },
       {
         status: 500,
