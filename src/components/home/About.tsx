@@ -3,30 +3,35 @@ import { stats } from "@/data/stats";
 
 export default function About() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-16 lg:grid-cols-2">
-          {/* Left */}
+        <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div>
             <SectionHeading
               subtitle="Who We Are"
               title="Building Financial Confidence Through Expertise"
-              description="NexGen Accounting Associates is a professionally managed finance and accounting consultancy dedicated to helping businesses stay compliant, organized and financially strong."
+              description="NexGen Accounting Associates is a professionally managed finance and accounting consultancy founded by dedicated professionals focused on precise, compliant, and value-driven financial services."
             />
+
+            <p className="mt-6 max-w-3xl leading-8 text-slate-600">
+              Our team brings practical exposure from CA articleship programmes,
+              corporate accounting environments, and consultancy firms. That
+              blend helps us handle complex accounting, audit, tax, and
+              regulatory documentation with a client-first mindset.
+            </p>
           </div>
 
-          {/* Right */}
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-2xl border border-slate-200 p-8 text-center shadow-sm"
+                className="rounded-lg border border-slate-200 bg-slate-50 p-6 shadow-sm"
               >
                 <h3 className="text-4xl font-bold text-yellow-600">
                   {stat.value}
                 </h3>
 
-                <p className="mt-2 text-slate-600">{stat.label}</p>
+                <p className="mt-2 font-medium text-slate-700">{stat.label}</p>
               </div>
             ))}
           </div>

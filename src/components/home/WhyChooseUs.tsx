@@ -1,21 +1,29 @@
-import SectionHeading from "@/components/shared/SectionHeading";
 import { advantages } from "@/data/advantages";
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-slate-950 py-24">
+    <section className="bg-slate-950 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <SectionHeading
-          subtitle="Our Advantage"
-          title="Why Choose NexGen?"
-          description="We don't just process numbers — we deliver clarity, compliance, and confidence."
-        />
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-widest text-yellow-400">
+            Our Advantage
+          </p>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Why Choose NexGen?
+          </h2>
+
+          <p className="mt-4 text-lg leading-8 text-slate-300">
+            We don&apos;t just process numbers. We deliver clarity, compliance,
+            and confidence.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:mt-16 lg:grid-cols-4">
           {advantages.map((item) => (
-            <div
+            <article
               key={item.number}
-              className="rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:border-yellow-500"
+              className="rounded-lg border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-yellow-300"
             >
               <span className="text-4xl font-bold text-yellow-500">
                 {item.number}
@@ -26,7 +34,7 @@ export default function WhyChooseUs() {
               </h3>
 
               <p className="mt-3 text-slate-400">{item.description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

@@ -12,9 +12,8 @@ export default function Footer() {
             </h3>
 
             <p className="mt-4 text-sm leading-relaxed">
-              Professional Accounting, Audit, Taxation,
-              Compliance and Advisory services helping
-              businesses grow with confidence.
+              Professional accounting, audit support, taxation, compliance, and
+              advisory services helping businesses grow with confidence.
             </p>
           </div>
 
@@ -26,19 +25,41 @@ export default function Footer() {
 
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <Link href="/">Home</Link>
+                <Link className="transition hover:text-yellow-300" href="/">
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/about">About</Link>
+                <Link
+                  className="transition hover:text-yellow-300"
+                  href="/about"
+                >
+                  About
+                </Link>
               </li>
               <li>
-                <Link href="/services">Services</Link>
+                <Link
+                  className="transition hover:text-yellow-300"
+                  href="/services"
+                >
+                  Services
+                </Link>
               </li>
               <li>
-                <Link href="/team">Team</Link>
+                <Link
+                  className="transition hover:text-yellow-300"
+                  href="/team"
+                >
+                  Team
+                </Link>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <Link
+                  className="transition hover:text-yellow-300"
+                  href="/contact"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
@@ -51,10 +72,11 @@ export default function Footer() {
 
             <ul className="mt-4 space-y-3 text-sm">
               <li>Accounting & Bookkeeping</li>
-              <li>GST Compliance</li>
-              <li>TDS Filing</li>
-              <li>Income Tax</li>
-              <li>Audit Support</li>
+              <li>GST Registration & Compliance</li>
+              <li>TDS Return Filing</li>
+              <li>Income Tax Return Filing</li>
+              <li>Statutory Audit Support</li>
+              <li>ROC Compliance</li>
             </ul>
           </div>
 
@@ -66,9 +88,9 @@ export default function Footer() {
 
             <ul className="mt-4 space-y-3 text-sm">
               <li>Delhi NCR, India</li>
-              <li>contact@nexgen.com</li>
-              <li>+91 XXXXX XXXXX</li>
-              <li>Mon - Fri : 9:30 AM - 6:30 PM</li>
+              <li>Use the enquiry form for current contact details</li>
+              <li>Mon - Fri: 9:30 AM - 6:30 PM</li>
+              <li>Saturday: 10:00 AM - 2:00 PM</li>
             </ul>
           </div>
         </div>

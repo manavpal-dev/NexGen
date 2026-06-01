@@ -27,28 +27,28 @@ const processSteps = [
 
 export default function ProcessSection() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="text-center">
+        <div className="mx-auto max-w-3xl text-center">
           <span className="font-semibold uppercase tracking-widest text-yellow-600">
             Our Process
           </span>
 
-          <h2 className="mt-4 text-4xl font-bold text-slate-900">
+          <h2 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">
             How We Work
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+          <p className="mt-4 text-lg leading-8 text-slate-600">
             A structured and transparent approach that ensures accuracy,
             compliance, and business growth.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:mt-16 lg:grid-cols-4">
           {processSteps.map((item) => (
-            <div
+            <article
               key={item.step}
-              className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+              className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-yellow-300 hover:shadow-md"
             >
               <span className="text-5xl font-bold text-yellow-500">
                 {item.step}
@@ -58,8 +58,10 @@ export default function ProcessSection() {
                 {item.title}
               </h3>
 
-              <p className="mt-4 text-slate-600">{item.description}</p>
-            </div>
+              <p className="mt-4 leading-7 text-slate-600">
+                {item.description}
+              </p>
+            </article>
           ))}
         </div>
       </div>
